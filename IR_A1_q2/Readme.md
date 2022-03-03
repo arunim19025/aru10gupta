@@ -10,7 +10,7 @@ This Python file creates Positional Index of the given dataset and do a search f
 The question demanded certain Preprocessing steps
 
 ```bash
-  -Convert the text to lower case
+  -Convert the text to lowercase
   -Perform word tokenization
   -Remove stopwords from tokens
   -Remove punctuation marks from tokens
