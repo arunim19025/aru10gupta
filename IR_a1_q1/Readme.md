@@ -1,26 +1,38 @@
+# Unigram Inverted Index
 
-# Positional Index and Phrase Queries
-
-
-This Python file creates Positional Index of the given dataset and do a search for Phrase query
+This python file has the implementaion of Unigram Inverted Index and Queries with bolean operator such as and,or,not.
 
 
-## Preprocessing
-
-The question demanded certain Preprocessing steps
-
+Provide support for the following commands:
 ```bash
-  -Convert the text to lowercase
-  -Perform word tokenization
-  -Remove stopwords from tokens
-  -Remove punctuation marks from tokens
-  -Remove blank space tokens
+  - x OR y
+  - x AND y
+  - x AND NOT y
+  - x OR NOT y
 ```
 
-Then Positional Index was created which is a dictionary. Assumptions are as follows
-
+Preprocessing used : 
 ```bash
-  -Phrase query length is 5 (assumed)
-  -Data set used is called Humor,Hist,Media,Food which is uploaded
-
+   - Removal of stop words.
+   - Removal of Block words(These are hand annotated).
+   - Tokenization.
+   - Lemmatization.
+   - Tokens with less than length 2 are not considered.
 ```
+      
+The queries can be of more than 2 words of the form: "x OP1 y OP2 z" where OP1, OP2 = AND, OR, NOT.
+
+Given a query, the model outputs : 
+      
+```bash     
+  - the number of docs retrieved
+  - the minimum number of total comparisons done (if any)
+  - the list of documents retrieved.
+```
+
+
+
+
+
+
+
